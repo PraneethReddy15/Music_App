@@ -153,3 +153,7 @@ nav ul li{
 #giff{
     height: 30px;
 }
+.playing {
+    background-color: #d02020; 
+    font-weight: bold;
+}
