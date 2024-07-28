@@ -11,14 +11,18 @@ let playThisSong2 = document.getElementById('playthissong2');
 let playThisSong3 = document.getElementById('playthissong3');
 let playThisSong4 = document.getElementById('playthissong4');
 let playThisSong5 = document.getElementById('playthissong5');
+let songItems = document.getElementsByClassName('songitem');
+
+
+
 
 const songs = [
-    { title: 'Mockingbird - Eminem', src: './songs/Mockingbird.mp3' },
-    { title: 'Love Me Like You Do - Ellie', src: './songs/LoveMeLikeYouDo.mp3' },
-    { title: 'Fe!n - Travis Scott', src: './songs/Fein.mp3' },
-    { title: 'Daylight - David Kushner', src: './songs/Daylight.mp3' },
-    { title: 'Fall Back - Lithe', src: './songs/FallBack.mp3' },
-    { title: 'Anuvanuvuu - Arjit Singh', src: './songs/Anuvanuvuu.mp3' }
+    { title: 'Mockingbird - Eminem', src: './songs/Mockingbird.mp3', element: playThisSong },
+    { title: 'Love Me Like You Do - Ellie', src: './songs/Lovemelikeyoudo.mp3', element: playThisSong1 },
+    { title: 'Fe!n - Travis Scott', src: './songs/Fein.mp3', element: playThisSong2 },
+    { title: 'Daylight - David Kushner', src: './songs/Daylight.mp3', element: playThisSong3 },
+    { title: 'Fall Back - Lithe', src: './songs/FallBack.mp3', element: playThisSong4 },
+    { title: 'Anuvanuvuu - Arjit Singh', src: './songs/Anuvanuvuu.mp3', element: playThisSong5 }
 ];
 
 let currentIndex = 0;
@@ -65,6 +69,9 @@ playThisSong4.addEventListener("click", function() { changesong(4); });
 playThisSong5.addEventListener("click", function() { changesong(5); });
 
 function changesong(index) {
+    if (songs[currentIndex].element) {
+        songs[currentIndex].element.closest('.songitem').classList.remove('playing');
+    }
     currentIndex = index;
     audioElement.src = songs[index].src;
     audioElement.play().then(() => {
@@ -73,12 +80,12 @@ function changesong(index) {
         innerContent.innerHTML = songs[index].title;
         document.getElementById("gif").style.backgroundImage = "url('./util/bg1.gif')";
         document.getElementById("gif").style.backgroundSize = "cover";
+        songs[index].element.closest('.songitem').classList.add('playing');
     }).catch((error) => {
         console.error("Error playing audio:", error);
         alert("Failed to load the audio file.");
     });
 }
-
 function forwardSong() {
     currentIndex = (currentIndex + 1) % songs.length;
     changesong(currentIndex);
