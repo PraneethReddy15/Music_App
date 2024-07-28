@@ -1,0 +1,142 @@
+body {
+   
+    background-color: black;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    height: 65px;
+    background-color: black;
+    list-style-type: none;
+    color: white;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #e74c3c;
+    transition: width 0.5s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.brand img {
+    width: 50px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #e74c3c;
+}
+nav ul li{
+    padding:0 12px;
+}
+.playlist-page {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 2em;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    color: black;
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.playlist-page h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.playlist-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.playlist-page input[type="text"] {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.playlist-page input[type="submit"] {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    background-color: #2e2726;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.playlist-page input[type="submit"]:hover {
+    background-color: #2d1512;
+}
+
+.playlist-page ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2em;
+}
+
+.playlist-page ul li {
+    background-color: white;
+    color: black;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

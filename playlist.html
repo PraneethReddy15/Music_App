@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/playlist.css">
+    <title>MELODIFY - Music App</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="./util/logo.png" alt="melodify">MELODIFY</li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="#">Playlist</a></li>
+        </ul>
+    </nav>
+    <div class="playlist-page">
+        <h1 style="color: black;">Add Songs to Your Playlist</h1>
+        <form id="playlistForm">
+            <input type="text" id="songName" placeholder="Enter song name" required>
+            <input type="text" id="artistName" placeholder="Enter artist name" required>
+            <input type="submit" value="Add Song">
+        </form>
+        <ul id="songList"></ul>
+    </div>
+</body>
+</html>

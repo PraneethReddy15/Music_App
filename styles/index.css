@@ -1,0 +1,155 @@
+body {
+    background-image: url('../util/bg1.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    height: 65px;
+    background-color: black;
+    list-style-type: none;
+    color: white;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #e74c3c;
+    transition: width 0.5s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.brand img {
+    width: 50px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: #e74c3c;
+}
+nav ul li{
+    padding:0 12px;
+}
+.container{
+    min-height: 65vh;
+    color: white;
+    font-family:'Varela Round', sans-serif;
+    display:flex;
+    width:70%;
+    margin:23px auto;
+    border-radius:20px;
+    background-color: black;
+    padding:34px;
+    background-image:url('../util/headphones.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    overflow: hidden;
+    
+}
+.bottom{
+    position:sticky;
+    background-color:black;
+    height:130px;
+    bottom:0;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    color:white;
+    flex-direction: column;
+    
+}
+
+.icons{
+    margin-top:24px;
+}
+.icons i{
+    cursor: pointer;
+
+}
+#myprogress{
+    width: 80vw;
+    cursor: pointer;
+    
+}
+
+.songitem{
+    display:flex;
+    height:50px;
+    background-color:white;
+    width:80%;
+    color:black;
+    margin:12px 0;
+    align-items:center;
+    justify-content: space-between;
+    border-radius:20px;
+    padding: 10px;
+}
+
+.songicon{
+    height: 40px;
+    margin:0 15px;
+    width:50px;
+    border-radius:15%;
+}
+.timestamp{
+    margin:0 12px;
+}
+.timestamp i{
+    padding-left: 10px;
+    cursor: pointer;
+}
+.songitemcontainer{
+    margin-top: 40px;
+}
+.songinfo{
+    position:absolute;
+    left:140px;
+}
+.songinfo img{
+    opacity:0;
+    transition: opacity 1s ease-in;
+}
+
+#giff{
+    height: 30px;
+}
